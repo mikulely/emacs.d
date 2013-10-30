@@ -44,6 +44,8 @@
 
 (after-load 'git-gutter
   (require 'git-gutter-fringe))
+(global-git-gutter-mode t)
+(setq git-gutter-fr:side 'right-fringe)
 
 
 (when *is-a-mac*

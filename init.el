@@ -114,6 +114,15 @@
 ;;----------------------------------------------------------------------------
 (require 'init-local nil t)
 
+ 
+;----------------------------------------------------------------------------
+; Customization (load all files in mikulely-dir)
+;----------------------------------------------------------------------------
+(setq mikulely-dir (expand-file-name "~/.emacs.d/mikulely"))
+(dolist (file (directory-files mikulely-dir t "\\w+"))
+   (when (file-regular-p file)
+             (load file)))
+
 
 ;;----------------------------------------------------------------------------
 ;; Locales (setting them earlier in this file doesn't work in X)
