@@ -59,20 +59,15 @@
 
                               ;; 为了使各个分类项目的标题在日程表（Agenda View）中显示，需要在项目名
                               ;; 称下面写上「#+CATEGORY」。
-                              ("t" "TODO" entry (file+headline
-                                                 "~/Dropbox/org/gtd/taskdiary.org")
-                               "* TODO %^{在做什么？}  %^g\n%?":prepend t :empty-lines 1
-                               )
-
                               ("s" "SOMEDAY" entry (file+headline
                                                     "~/Dropbox/org/gtd/someday.org" "To be Sorted")
                                "* TODO %^{想做什么？请写上清晰的执行动作}  %?":prepend t :empty-lines 1
                                )
 
                               ;; 需要在指定日期完成的事情
-                              ("a" "Appointment" entry (file+headline
-                                                        "~/Dropbox/org/gtd/taskdiary.org" "Calendar")
-                               "** APPT %^{Action oriented description} %^g %? " :prepend t :empty-lines 1
+                              ("w" "Work" entry (file+datetree
+                                                        "~/Dropbox/org/nsfocus/nsfocus_diary.org")
+                               "* TODO %^{在做什么？}  %?":prepend t :empty-lines 1
                                )
                               ;; %^g prompts for a tag
                               ;; %u, %U like the above, but inactive timestamps.
@@ -94,10 +89,10 @@
                               ;; %T timestamp with date and time.
 
                               ;; 财务管理
-                              ("f" "Financial" table-line (file+headline
-                                                           "~/Dropbox/org/life/financial.org" "Financial")
-                               "|%u|%^{For What？}|%^{How much?}|" :prepend t :empty-lines 1
-                               )
+                              ;; ("f" "Financial" table-line (file+headline
+                              ;;                              "~/Dropbox/org/life/financial.org" "Financial")
+                              ;;  "|%u|%^{For What？}|%^{How much?}|" :prepend t :empty-lines 1
+                              ;;  )
 
                               ;; 单词管理
                               ("e" "English" entry (file+datetree

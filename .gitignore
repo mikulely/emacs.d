@@ -27,3 +27,4 @@ site-lisp/package/
 /emms/cache
 /emms/history
 /site-lisp/racket-mode/
+/.bookmarks.el
