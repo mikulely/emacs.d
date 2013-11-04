@@ -67,7 +67,7 @@
                               ;; 需要在指定日期完成的事情
                               ("w" "Work" entry (file+datetree
                                                         "~/Dropbox/org/nsfocus/nsfocus_diary.org")
-                               "* TODO %^{在做什么？}  %?":prepend t :empty-lines 1
+                               "* Coding %^{在做什么？}  %?":prepend t :empty-lines 1
                                )
                               ;; %^g prompts for a tag
                               ;; %u, %U like the above, but inactive timestamps.

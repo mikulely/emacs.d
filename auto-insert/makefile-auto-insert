@@ -1,0 +1,9 @@
+objects := $(patsubst %c, %o, $(wildcard *.c))
+cc = gcc
+
+$0 : $(objects)
+    cc $(objects) -o program
+
+.PHONY: clean
+clean:
+    -rm program $(objects)

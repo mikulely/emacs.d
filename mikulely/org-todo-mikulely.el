@@ -44,6 +44,7 @@
               ;; 处理Bug
               ;; (sequence "REPORT(r!)" "KNOWNCAUSE(k!)" "|" "FIXED(f!)")
               ;; 进一步处理
+			  (sequence "Testing" "|" "Coding" "Documentation")
 			  (sequence "OPEN@BUG" "INVESTIGATE@BUG" "FIX@BUG"
                         "TEST@BUG" "REVIEW@BUG" "CLOSE@BUG" "|"
                         "FIXED@BUG" "TRANSFERRED@BUG")

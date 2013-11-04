@@ -1,0 +1,10 @@
+// file name : `(buffer-name)`
+// created at: `(format-time-string "%c")`
+// author:  `user-full-name`
+
+#ifndef `(buffer-name)`_H__
+#define `(buffer-name)`_H__
+
+$0
+
+#endif /* `(buffer-name)`_H__ */

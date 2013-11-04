@@ -30,6 +30,11 @@
 (emms-standard)
 (emms-default-players)
 
+(add-hook 'emms-playlist-mode-hook
+          (lambda ()
+            (hl-line-mode t))
+          't)
+
 ;; Show the current track each time EMMS
 ;; starts to play a track with "播放 : "
 (add-hook 'emms-player-started-hook 'emms-show)
@@ -56,8 +61,6 @@
   (interactive)
   (goto-char (point-min))
   (call-interactively 'isearch-forward))
-
-
 
 ;;; provide features
 (provide 'emms-mikulely)

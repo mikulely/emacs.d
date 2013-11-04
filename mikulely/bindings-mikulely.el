@@ -431,7 +431,6 @@ cursor."
 ;; magit related
 (evil-define-key 'normal magit-log-edit-mode-map "q" 'magit-log-edit-commit)
 (evil-declare-key 'emacs magit-mode-map
-  "q" (lambda () (interactive) (magit-quit-window 'kill-buffer))
   ";" 'magit-toggle-section
   ;; Map "j" to magit-goto-next-section in eveywhere
   ;; @see https://github.com/GriffinSchneider/emacs-config/blob/master/init.el

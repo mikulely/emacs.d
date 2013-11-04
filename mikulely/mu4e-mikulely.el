@@ -38,8 +38,7 @@
       mu4e-headers-skip-duplicates t                     ; skip duplicate email, great for gmail
       mu4e-headers-date-format "%d %b, %H:%M"            ; date format
       mu4e-headers-leave-behavior 'apply                 ; don't prompt for applying of marks, just apply
-      mu4e-html2text-command "html2text -width 80" ; convert HTML to text
-      ;; mu4e-html2text-command "w3m -dump -T text/html"    ; convert HTML to text
+      mu4e-html2text-command "w3m -dump -T text/html"    ; convert HTML to text
       mu4e-compose-dont-reply-to-self t                  ; don't reply to myself
       message-kill-buffer-on-exit t                      ; don't keep message buffers around
       smtpmail-queue-mail nil                            ; start in non queue mode
@@ -153,21 +152,16 @@
       '(
         ("nsfocus"
          (user-full-name    "任家英")
-         (user-mail-address "renjiaying@intra.nsfocus.com")
-         (message-signature
-          (concat
-           "任家英\n"
-           "研发一部 ESD 组\n"
-           "分机号 5484\n"
-           ))
+         (mu4e-compose-signature (concat "任家英\n" "研发一部 ESD 组\n" "分机号 5484\n"))
          (mu4e-sent-folder   "/Raw/Nsfocus/Sent")
          (mu4e-drafts-folder "/Raw/Nsfocus/Drafts")
          (mu4e-trash-folder  "/Raw/Nsfocus/Trashs")
+         (user-mail-address "renjiaying@intra.nsfocus.com")
          )
         ("mikulely"
          (user-full-name     "mikulely")
          (user-mail-address  "mikulely@gmail.com")
-         (message-signature  "Best Regards!\n mikulely\n")
+         (mu4e-compose-signature   "Best Regards!\n mikulely\n")
          (mu4e-sent-folder   "/Raw/Mikulely/[Gmail].Sent Mail")
          (mu4e-drafts-folder "/Raw/Mikulely/[Gmail].Drafts")
          (mu4e-trash-folder  "/Raw/Mikulely/[Gmail].Trashs")
@@ -190,8 +184,8 @@
         (mapc #'(lambda (var)
                   (set (car var) (cadr var)))
               account-vars))))
-(add-hook 'mu4e-compose-pre-hook 'wunki-mu4e-set-account)
 
+(add-hook 'mu4e-compose-pre-hook 'wunki-mu4e-set-account)
 ;;------------------------------------------------------------------------------
 ;; Reply
 ;; @see http://zmalltalker.com/linux/mu.html

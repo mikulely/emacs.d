@@ -1,0 +1,14 @@
+// file name : `(buffer-name)`
+// created at: `(format-time-string "%c")`
+// author:  `user-full-name`
+
+#include <iostream>
+
+using std::cin;
+using std::cout;
+using std::endl;
+
+int main(int argc, char *argv[]){
+  $0
+  return 0;
+}
