@@ -66,7 +66,7 @@
 
     ;; sig
     ("8jy"    "Jiaying Ren")
-    ("8ns"    "renjiaying@intra.nsfoucs.com")
+    ("8ns"    "renjiaying@intra.nsfocus.com")
     ("8gm"    "mikulely@gmail.com")
     ("8ya"     "renjiaying@ymail.com")
 
